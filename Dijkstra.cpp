@@ -9,13 +9,13 @@ int main() {
     do {
         cout << "Ingrese cantidad de nodos [8-16]: ";
         cin >> n;
-        if (n < 8 || n>16) cout << "⚠️  Por favor ingrese un valor entre 8 y 16.\n";
+        if (n < 8 || n>16) cout << "Por favor ingrese un valor entre 8 y 16.\n";
     } while (n < 8 || n>16);
 
     Grafo g(n);
 
     int opcion;
-    cout << "\n1. Generar grafo manualmente\n2. Generar grafo aleatoriamente\nSeleccione una opción: ";
+    cout << "\n1. Generar grafo manualmente\n2. Generar grafo aleatoriamente\nSeleccione una opcion: ";
     cin >> opcion;
 
     if (opcion == 1) g.llenarManual();
@@ -30,7 +30,7 @@ int main() {
         cin >> nodoInicio;
         nodoInicio = toupper(nodoInicio);
         inicio = nodoInicio - 'A';
-        if (inicio < 0 || inicio >= n) cout << "⚠️ Nodo inválido. Intente nuevamente.\n";
+        if (inicio < 0 || inicio >= n) cout << "Nodo invalido. Intente nuevamente.\n";
     } while (inicio < 0 || inicio >= n);
 
     char nodoDestino;
@@ -40,7 +40,7 @@ int main() {
         cin >> nodoDestino;
         nodoDestino = toupper(nodoDestino);
         destino = nodoDestino - 'A';
-        if (destino < 0 || destino >= n || destino == inicio) cout << "⚠️ Nodo inválido. Intente nuevamente.\n";
+        if (destino < 0 || destino >= n || destino == inicio) cout << "Nodo invalido. Intente nuevamente.\n";
     } while (destino < 0 || destino >= n || destino == inicio);
 
     g.dijkstraPasoAPaso(inicio, destino);
