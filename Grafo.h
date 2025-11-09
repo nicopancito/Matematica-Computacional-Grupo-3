@@ -10,7 +10,7 @@ using namespace std;
 
 class Grafo {
 private:
-    int n; // num de nodos
+    int n; 
     vector<vector<int>> matriz;
 
     void setColor(int color) {
@@ -172,3 +172,4 @@ public:
         cout << endl;
     }
 };
+
